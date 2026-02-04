@@ -1,4 +1,5 @@
 local M = {}
+local bg = "light"
 
 M.palette = {
   litmus_0 = "#1a1a1a",
@@ -27,7 +28,7 @@ M.palette = {
 
 function M.setup()
   local colorbuddy = require("colorbuddy")
-  colorbuddy.colorscheme("litmus")
+  colorbuddy.colorscheme("litmus", bg)
 
   local Color = colorbuddy.Color
   local c = colorbuddy.colors
@@ -246,6 +247,10 @@ function M.setup()
   Group.new("@tag.delimiter", c.litmus_4)
 
   -- LSP SEMANTIC TOKENS -----------------------------------
+
+  Group.new("LspReferenceText", c.info, nil, s.bold)
+  Group.new("LspReferenceRead", c.info, nil, s.bold)
+  Group.new("LspReferenceWrite", c.info, nil, s.bold)
 
   Group.new("@lsp.type.class", g["@type"])
   Group.new("@lsp.type.decorator", g["@function"])
