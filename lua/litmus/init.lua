@@ -42,9 +42,9 @@ function M.setup()
 
   hi("Normal",      { fg = p.litmus_0, bg = p.litmus_9 })
   hi("NormalNC",    { fg = p.litmus_2, bg = p.litmus_9 })
-  hi("NormalFloat", { fg = p.litmus_0, bg = p.litmus_9 })
-  hi("FloatBorder", { fg = p.litmus_6, bg = p.litmus_9 })
-  hi("FloatTitle",  { fg = p.primary,  bg = p.litmus_9, bold = true })
+  hi("NormalFloat", { fg = p.litmus_0, bg = p.litmus_8 })
+  hi("FloatBorder", { fg = p.litmus_5, bg = p.litmus_8 })
+  hi("FloatTitle",  { fg = p.primary,  bg = p.litmus_8, bold = true })
 
   hi("Cursor",       { fg = p.litmus_9, bg = p.litmus_0 })
   hi("CursorLine",   { bg = p.litmus_8 })
@@ -70,10 +70,16 @@ function M.setup()
   hi("TabLineFill", { bg = p.litmus_8 })
   hi("TabLineSel",  { fg = p.litmus_0, bg = p.litmus_9, bold = true })
 
-  hi("Pmenu",      { fg = p.litmus_0, bg = p.litmus_9 })
-  hi("PmenuSel",   { fg = p.litmus_9, bg = p.primary })
-  hi("PmenuSbar",  { bg = p.litmus_8 })
-  hi("PmenuThumb", { bg = p.litmus_6 })
+  hi("Pmenu",         { fg = p.litmus_1, bg = p.litmus_8 })
+  hi("PmenuSel",      { fg = p.litmus_9, bg = p.primary })
+  hi("PmenuMatch",    { fg = p.primary,  bg = p.litmus_8, bold = true })
+  hi("PmenuMatchSel", { fg = p.litmus_9, bg = p.primary, bold = true })
+  hi("PmenuKind",     { fg = p.litmus_4, bg = p.litmus_8 })
+  hi("PmenuKindSel",  { fg = p.litmus_7, bg = p.primary })
+  hi("PmenuExtra",    { fg = p.litmus_5, bg = p.litmus_8 })
+  hi("PmenuExtraSel", { fg = p.litmus_8, bg = p.primary })
+  hi("PmenuSbar",     { bg = p.litmus_7 })
+  hi("PmenuThumb",    { bg = p.litmus_3 })
 
   hi("Search",     { fg = p.litmus_9, bg = p.info })
   hi("IncSearch",  { fg = p.litmus_9, bg = p.primary })
@@ -138,7 +144,7 @@ function M.setup()
 
   hi("Underlined", { fg = p.primary, underline = true })
   hi("Error",      { fg = p.error, bold = true })
-  hi("Todo",       { fg = p.primary, bg = p.litmus_8, bold = true })
+  hi("Todo",       { fg = p.primary, bold = true })
 
   -- TREESITTER --------------------------------------------
 
