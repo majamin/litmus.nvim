@@ -83,9 +83,15 @@ function M.setup()
 
   hi("Search",     { fg = p.litmus_9, bg = p.info })
   hi("IncSearch",  { fg = p.litmus_9, bg = p.primary })
-  hi("CurSearch",  { fg = p.litmus_9, bg = p.primary, bold = true })
+  hi("CurSearch",  { fg = p.litmus_9, bg = p.primary })
   hi("Substitute", { fg = p.litmus_9, bg = p.change })
-  hi("MatchParen", { fg = p.primary,  bg = p.litmus_8, bold = true })
+  hi("MatchParen", { fg = p.litmus_9, bg = p.info, bold = true })
+
+  -- hi("Search",     { fg = p.litmus_9, bg = p.info })
+  -- hi("IncSearch",  { fg = p.litmus_9, bg = p.primary })
+  -- hi("CurSearch",  { fg = p.litmus_9, bg = p.primary, bold = true })
+  -- hi("Substitute", { fg = p.litmus_9, bg = p.change })
+  -- hi("MatchParen", { fg = p.primary,  bg = p.litmus_8, bold = true })
 
   hi("ModeMsg",    { fg = p.litmus_2, bold = true })
   hi("MoreMsg",    { fg = p.primary })
