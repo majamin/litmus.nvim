@@ -173,9 +173,9 @@ function M.setup()
   hi("@number",       { fg = p.litmus_1 })
   hi("@number.float", { fg = p.litmus_1 })
 
-  hi("@type",            { fg = p.litmus_1 })
-  hi("@type.builtin",    { fg = p.litmus_2 })
-  hi("@type.definition", { fg = p.litmus_1 })
+  hi("@type",            { fg = p.warning })
+  hi("@type.builtin",    { fg = p.warning })
+  hi("@type.definition", { fg = p.warning })
 
   hi("@attribute", { fg = p.litmus_3 })
   hi("@property",  { fg = p.litmus_1 })
