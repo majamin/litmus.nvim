@@ -9,20 +9,20 @@ M.palette = {
   litmus_5 = "#8a8a8a",
   litmus_6 = "#a1a1a1",
   litmus_7 = "#c4c4c4",
-  litmus_8 = "#d7e9f4",
+  litmus_8 = "#d3ebf8",
   litmus_9 = "#f7fcff",
 
-  primary = "#be185d",
-  secondary = "#9f1239",
+  primary =   "#bf1d71",
+  secondary = "#461dbf",
 
-  error = "#dc2626",
-  warning = "#644696",
-  info = "#2563eb",
-  hint = "#737373",
+  error =   "#dc2678",
+  warning = "#891dbf",
+  info =    "#19a6a6",
+  hint =    "#737373",
 
-  add = "#16a34a",
-  change = "#ca8a04",
-  delete = "#dc2626",
+  add =    "#d7ffff",
+  change = "#ffffd7",
+  delete = "#ffd7d7",
 }
 
 function M.setup()
@@ -81,17 +81,11 @@ function M.setup()
   hi("PmenuSbar",     { bg = p.litmus_7 })
   hi("PmenuThumb",    { bg = p.litmus_3 })
 
-  hi("Search",     { fg = p.litmus_9, bg = p.info })
-  hi("IncSearch",  { fg = p.litmus_9, bg = p.primary })
-  hi("CurSearch",  { fg = p.litmus_9, bg = p.primary })
-  hi("Substitute", { fg = p.litmus_9, bg = p.change })
-  hi("MatchParen", { fg = p.litmus_9, bg = p.info, bold = true })
-
-  -- hi("Search",     { fg = p.litmus_9, bg = p.info })
-  -- hi("IncSearch",  { fg = p.litmus_9, bg = p.primary })
-  -- hi("CurSearch",  { fg = p.litmus_9, bg = p.primary, bold = true })
-  -- hi("Substitute", { fg = p.litmus_9, bg = p.change })
-  -- hi("MatchParen", { fg = p.primary,  bg = p.litmus_8, bold = true })
+  hi("Search",     { bg = p.add })
+  hi("IncSearch",  { bg = p.add })
+  hi("CurSearch",  { bg = p.add })
+  hi("Substitute", { bg = p.add })
+  hi("MatchParen", { bg = p.delete, bold = true })
 
   hi("ModeMsg",    { fg = p.litmus_2, bold = true })
   hi("MoreMsg",    { fg = p.primary })
@@ -257,9 +251,9 @@ function M.setup()
 
   -- LSP SEMANTIC TOKENS -----------------------------------
 
-  hi("LspReferenceText",  { fg = p.info, bold = true })
-  hi("LspReferenceRead",  { fg = p.info, bold = true })
-  hi("LspReferenceWrite", { fg = p.info, bold = true })
+  hi("LspReferenceText",  { fg = p.primary, italic = true, bold = true })
+  hi("LspReferenceRead",  { fg = p.primary, italic = true, bold = true })
+  hi("LspReferenceWrite", { fg = p.primary, italic = true, bold = true })
 
   hi("csvCol0",  { fg = p.error })
   hi("csvCol1",  { fg = p.warning })
@@ -303,13 +297,13 @@ function M.setup()
   hi("DiagnosticUnderlineWarn",  { undercurl = true, sp = p.warning })
   hi("DiagnosticUnderlineInfo",  { undercurl = true, sp = p.info })
   hi("DiagnosticUnderlineHint",  { undercurl = true, sp = p.hint })
-  hi("DiagnosticUnderlineOk",    { undercurl = true, sp = p.add })
+  hi("DiagnosticUnderlineOk",    { undercurl = true, sp = p.litmus_0 })
 
-  hi("DiagnosticVirtualTextError", { fg = p.error,   bg = p.litmus_9 })
-  hi("DiagnosticVirtualTextWarn",  { fg = p.warning, bg = p.litmus_9 })
-  hi("DiagnosticVirtualTextInfo",  { fg = p.info,    bg = p.litmus_9 })
+  hi("DiagnosticVirtualTextError", { fg = p.error,   bg = p.delete })
+  hi("DiagnosticVirtualTextWarn",  { fg = p.warning, bg = p.change })
+  hi("DiagnosticVirtualTextInfo",  { fg = p.info,    bg = p.add })
   hi("DiagnosticVirtualTextHint",  { fg = p.hint,    bg = p.litmus_9 })
-  hi("DiagnosticVirtualTextOk",    { fg = p.add,     bg = p.litmus_9 })
+  hi("DiagnosticVirtualTextOk",    { fg = p.litmus_0,  bg = p.add })
 
   hi("DiagnosticFloatingError", { fg = p.error })
   hi("DiagnosticFloatingWarn",  { fg = p.warning })
@@ -325,14 +319,14 @@ function M.setup()
 
   -- DIFF --------------------------------------------------
 
-  hi("DiffAdd",    { fg = p.add,    bg = p.litmus_9 })
-  hi("DiffChange", { fg = p.change, bg = p.litmus_9 })
-  hi("DiffDelete", { fg = p.delete, bg = p.litmus_9 })
-  hi("DiffText",   { fg = p.change, bg = p.litmus_8, bold = true })
+  hi("DiffAdd",    { fg = p.litmus_0, bg = p.add })
+  hi("DiffChange", { fg = p.litmus_0, bg = p.change })
+  hi("DiffDelete", { fg = p.litmus_0, bg = p.delete })
+  hi("DiffText",   { fg = p.litmus_0, bg = p.litmus_8, bold = true })
 
-  hi("Added",   { fg = p.add })
-  hi("Changed", { fg = p.change })
-  hi("Removed", { fg = p.delete })
+  hi("Added",   { fg = p.litmus_0, bg = p.add })
+  hi("Changed", { fg = p.litmus_0, bg = p.change })
+  hi("Removed", { fg = p.litmus_0, bg = p.delete })
 
   -- PLUGINS -----------------------------------------------
 
@@ -366,6 +360,9 @@ function M.setup()
   hi("GitSignsAdd",              { fg = p.add })
   hi("GitSignsChange",           { fg = p.change })
   hi("GitSignsDelete",           { fg = p.delete })
+  hi("GitSignsAddNr",            { fg = p.litmus_0, bg = p.add })
+  hi("GitSignsChangeNr",         { fg = p.litmus_0, bg = p.change })
+  hi("GitSignsDeleteNr",         { fg = p.litmus_0, bg = p.delete })
   hi("GitSignsCurrentLineBlame", { fg = p.litmus_5 })
 
   -- neo-tree
@@ -434,12 +431,12 @@ function M.setup()
   hi("NotifyTRACETitle",  { fg = p.secondary, bold = true })
 
   -- mini.nvim
-  hi("MiniStatuslineModeNormal",  { fg = p.litmus_9, bg = p.primary,   bold = true })
-  hi("MiniStatuslineModeInsert",  { fg = p.litmus_9, bg = p.add,       bold = true })
-  hi("MiniStatuslineModeVisual",  { fg = p.litmus_9, bg = p.secondary, bold = true })
-  hi("MiniStatuslineModeReplace", { fg = p.litmus_9, bg = p.delete,    bold = true })
-  hi("MiniStatuslineModeCommand", { fg = p.litmus_9, bg = p.change,    bold = true })
-  hi("MiniStatuslineModeOther",   { fg = p.litmus_9, bg = p.litmus_4,  bold = true })
+  hi("MiniStatuslineModeNormal",  { fg = p.litmus_9, bg = p.primary,  bold = true })
+  hi("MiniStatuslineModeInsert",  { fg = p.litmus_9, bg = p.info,     bold = true })
+  hi("MiniStatuslineModeVisual",  { fg = p.litmus_9, bg = p.warning,  bold = true })
+  hi("MiniStatuslineModeReplace", { fg = p.litmus_9, bg = p.error,    bold = true })
+  hi("MiniStatuslineModeCommand", { fg = p.litmus_9, bg = p.hint,     bold = true })
+  hi("MiniStatuslineModeOther",   { fg = p.litmus_9, bg = p.litmus_4, bold = true })
   hi("MiniStatuslineFilename",    { fg = p.litmus_2, bg = p.litmus_8 })
   hi("MiniStatuslineFileinfo",    { fg = p.litmus_3, bg = p.litmus_8 })
   hi("MiniStatuslineDevinfo",     { fg = p.litmus_3, bg = p.litmus_8 })
