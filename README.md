@@ -10,7 +10,6 @@ A light colorscheme with rose accents and blue-washed surfaces.
 -- lazy.nvim
 {
   "majamin/litmus.nvim",
-  dependencies = { "tjdevries/colorbuddy.nvim" },
   config = function()
     vim.cmd("colorscheme litmus")
   end,
