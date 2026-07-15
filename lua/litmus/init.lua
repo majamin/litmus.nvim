@@ -1,5 +1,9 @@
 local M = {}
 
+M.config = {
+  transparent = false,
+}
+
 M.palette = {
   litmus_0 = "#1a1a1a",
   litmus_1 = "#2d2d2d",
@@ -20,12 +24,14 @@ M.palette = {
   info =    "#19a6a6",
   hint =    "#737373",
 
-  add =    "#d7ffff",
-  change = "#ffffd7",
-  delete = "#ffd7d7",
+  add =    "#d4feff",
+  change = "#fffed4",
+  delete = "#fed4ff",
 }
 
-function M.setup()
+function M.setup(opts)
+  M.config = vim.tbl_deep_extend("force", M.config, opts or {})
+
   vim.cmd("hi clear")
   if vim.fn.exists("syntax_on") == 1 then
     vim.cmd("syntax reset")
@@ -38,10 +44,13 @@ function M.setup()
     vim.api.nvim_set_hl(0, name, opts)
   end
 
+  -- base editor background; "NONE" lets the terminal show through
+  local bg = M.config.transparent and "NONE" or p.litmus_9
+
   -- EDITOR ------------------------------------------------
 
-  hi("Normal",      { fg = p.litmus_0, bg = p.litmus_9 })
-  hi("NormalNC",    { fg = p.litmus_2, bg = p.litmus_9 })
+  hi("Normal",      { fg = p.litmus_0, bg = bg })
+  hi("NormalNC",    { fg = p.litmus_2, bg = bg })
   hi("NormalFloat", { fg = p.litmus_0, bg = p.litmus_8 })
   hi("FloatBorder", { fg = p.litmus_5, bg = p.litmus_8 })
   hi("FloatTitle",  { fg = p.primary,  bg = p.litmus_8, bold = true })
@@ -54,21 +63,21 @@ function M.setup()
   hi("VisualNOS",    { fg = p.litmus_0, bg = p.change })
 
   hi("LineNr",      { fg = p.litmus_6 })
-  hi("SignColumn",  { fg = p.litmus_4, bg = p.litmus_9 })
+  hi("SignColumn",  { fg = p.litmus_4, bg = bg })
   hi("ColorColumn", { bg = p.litmus_8 })
-  hi("VertSplit",   { fg = p.litmus_7, bg = p.litmus_9 })
-  hi("WinSeparator",{ fg = p.litmus_7, bg = p.litmus_9 })
+  hi("VertSplit",   { fg = p.litmus_7, bg = bg })
+  hi("WinSeparator",{ fg = p.litmus_7, bg = bg })
   hi("Folded",      { fg = p.litmus_4, bg = p.litmus_8 })
-  hi("FoldColumn",  { fg = p.litmus_6, bg = p.litmus_9 })
+  hi("FoldColumn",  { fg = p.litmus_6, bg = bg })
 
   hi("StatusLine",   { fg = p.litmus_0, bg = p.litmus_8 })
   hi("StatusLineNC", { fg = p.litmus_5, bg = p.litmus_8 })
-  hi("WinBar",       { fg = p.litmus_2, bg = p.litmus_9 })
-  hi("WinBarNC",     { fg = p.litmus_5, bg = p.litmus_9 })
+  hi("WinBar",       { fg = p.litmus_2, bg = bg })
+  hi("WinBarNC",     { fg = p.litmus_5, bg = bg })
 
   hi("TabLine",     { fg = p.litmus_4, bg = p.litmus_8 })
   hi("TabLineFill", { bg = p.litmus_8 })
-  hi("TabLineSel",  { fg = p.litmus_0, bg = p.litmus_9, bold = true })
+  hi("TabLineSel",  { fg = p.litmus_0, bg = bg, bold = true })
 
   hi("Pmenu",         { fg = p.litmus_1, bg = p.litmus_8 })
   hi("PmenuSel",      { fg = p.litmus_9, bg = p.primary })
@@ -302,7 +311,7 @@ function M.setup()
   hi("DiagnosticVirtualTextError", { fg = p.error,   bg = p.delete })
   hi("DiagnosticVirtualTextWarn",  { fg = p.warning, bg = p.change })
   hi("DiagnosticVirtualTextInfo",  { fg = p.info,    bg = p.add })
-  hi("DiagnosticVirtualTextHint",  { fg = p.hint,    bg = p.litmus_9 })
+  hi("DiagnosticVirtualTextHint",  { fg = p.hint,    bg = bg })
   hi("DiagnosticVirtualTextOk",    { fg = p.litmus_0,  bg = p.add })
 
   hi("DiagnosticFloatingError", { fg = p.error })
@@ -331,8 +340,8 @@ function M.setup()
   -- PLUGINS -----------------------------------------------
 
   -- telescope
-  hi("TelescopeNormal",        { fg = p.litmus_0, bg = p.litmus_9 })
-  hi("TelescopeBorder",        { fg = p.litmus_6, bg = p.litmus_9 })
+  hi("TelescopeNormal",        { fg = p.litmus_0, bg = bg })
+  hi("TelescopeBorder",        { fg = p.litmus_6, bg = bg })
   hi("TelescopeTitle",         { fg = p.primary, bold = true })
   hi("TelescopePromptNormal",  { fg = p.litmus_0, bg = p.litmus_8 })
   hi("TelescopePromptBorder",  { fg = p.litmus_6, bg = p.litmus_8 })
@@ -366,8 +375,8 @@ function M.setup()
   hi("GitSignsCurrentLineBlame", { fg = p.litmus_5 })
 
   -- neo-tree
-  hi("NeoTreeNormal",        { fg = p.litmus_2, bg = p.litmus_9 })
-  hi("NeoTreeNormalNC",      { fg = p.litmus_3, bg = p.litmus_9 })
+  hi("NeoTreeNormal",        { fg = p.litmus_2, bg = bg })
+  hi("NeoTreeNormalNC",      { fg = p.litmus_3, bg = bg })
   hi("NeoTreeDirectoryName", { fg = p.litmus_1 })
   hi("NeoTreeDirectoryIcon", { fg = p.primary })
   hi("NeoTreeRootName",      { fg = p.litmus_0, bold = true })
@@ -407,7 +416,7 @@ function M.setup()
   hi("MasonMutedBlock",           { fg = p.litmus_3, bg = p.litmus_8 })
 
   -- noice
-  hi("NoiceCmdline",            { fg = p.litmus_0, bg = p.litmus_9 })
+  hi("NoiceCmdline",            { fg = p.litmus_0, bg = bg })
   hi("NoiceCmdlineIcon",        { fg = p.primary })
   hi("NoiceCmdlineIconSearch",  { fg = p.primary })
   hi("NoiceCmdlinePopupBorder", { fg = p.litmus_6 })
@@ -461,7 +470,7 @@ function M.setup()
   hi("MiniPickPromptPrefix",  { link = "MiniPickPrompt" })
 
   -- snacks.nvim
-  hi("SnacksNormal",              { fg = p.litmus_0, bg = p.litmus_9 })
+  hi("SnacksNormal",              { fg = p.litmus_0, bg = bg })
   hi("SnacksDashboardHeader",     { fg = p.primary, bold = true })
   hi("SnacksDashboardFooter",     { fg = p.litmus_5 })
   hi("SnacksDashboardDesc",       { fg = p.litmus_2 })
@@ -495,12 +504,12 @@ function M.setup()
   hi("FlashCurrent", { fg = p.litmus_0, bg = p.litmus_7 })
 
   -- trouble.nvim
-  hi("TroubleNormal",   { fg = p.litmus_2, bg = p.litmus_9 })
-  hi("TroubleNormalNC", { fg = p.litmus_3, bg = p.litmus_9 })
+  hi("TroubleNormal",   { fg = p.litmus_2, bg = bg })
+  hi("TroubleNormalNC", { fg = p.litmus_3, bg = bg })
 
   -- harpoon
-  hi("HarpoonWindow", { fg = p.litmus_0, bg = p.litmus_9 })
-  hi("HarpoonBorder", { fg = p.litmus_6, bg = p.litmus_9 })
+  hi("HarpoonWindow", { fg = p.litmus_0, bg = bg })
+  hi("HarpoonBorder", { fg = p.litmus_6, bg = bg })
 
   -- leap.nvim
   hi("LeapMatch",          { fg = p.primary,   bold = true, underline = true })

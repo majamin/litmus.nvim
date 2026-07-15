@@ -22,6 +22,14 @@ A light colorscheme with rose accents and blue-washed surfaces.
 require("litmus").colors()
 ```
 
+Options (pass to `setup`):
+
+```lua
+require("litmus").setup({
+  transparent = false, -- set true to use the terminal background
+})
+```
+
 Override before setup:
 
 ```lua
