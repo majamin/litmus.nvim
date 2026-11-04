@@ -5,14 +5,14 @@ M.config = {
 }
 
 M.palette = {
-  litmus_0 = "#1a1a1a",
-  litmus_1 = "#2d2d2d",
-  litmus_2 = "#454545",
-  litmus_3 = "#5c5c5c",
-  litmus_4 = "#737373",
-  litmus_5 = "#8a8a8a",
-  litmus_6 = "#a1a1a1",
-  litmus_7 = "#c4c4c4",
+  litmus_0 = "#171b1d",
+  litmus_1 = "#292e31",
+  litmus_2 = "#414649",
+  litmus_3 = "#585d60",
+  litmus_4 = "#6f7477",
+  litmus_5 = "#868b8e",
+  litmus_6 = "#9da2a5",
+  litmus_7 = "#bdc6cb",
   litmus_8 = "#d3ebf8",
   litmus_9 = "#f7fcff",
 
@@ -24,7 +24,7 @@ M.palette = {
   error =   "#c21725",
   warning = "#a56205",
   info =    "#057176",
-  hint =    "#737373",
+  hint =    "#6f7477",
 
   add =    "#d4feff",
   change = "#fffed4",
@@ -120,7 +120,7 @@ function M.setup(opts)
 
   -- SYNTAX ------------------------------------------------
 
-  hi("Comment", { fg = p.litmus_5, italic = true })
+  hi("Comment", { fg = p.litmus_4, italic = true })
 
   hi("Constant",  { fg = p.litmus_1 })
   hi("String",    { fg = p.litmus_2 })
@@ -226,8 +226,8 @@ function M.setup(opts)
   hi("@punctuation.bracket",   { fg = p.litmus_4 })
   hi("@punctuation.special",   { fg = p.litmus_3 })
 
-  hi("@comment",               { fg = p.litmus_5, italic = true })
-  hi("@comment.documentation", { fg = p.litmus_4, italic = true })
+  hi("@comment",               { fg = p.litmus_4, italic = true })
+  hi("@comment.documentation", { fg = p.litmus_3, italic = true })
   hi("@comment.error",         { fg = p.error, bold = true })
   hi("@comment.warning",       { fg = p.warning, bold = true })
   hi("@comment.todo",          { fg = p.primary, bold = true })
