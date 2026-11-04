@@ -35,6 +35,15 @@ M.palette = {
   search =    "#feed8c",
   diff_text = "#f7dd7d",
 
+  -- used only by :terminal
+  blue =           "#1d60bc",
+  bright_red =     "#db2b33",
+  bright_green =   "#1b9247",
+  bright_yellow =  "#ab7302",
+  bright_blue =    "#2a71d6",
+  bright_magenta = "#d12b7e",
+  bright_cyan =    "#07858a",
+
   -- darker versions of the tints above, for use as text
   add_fg =    "#0a7e3a",
   change_fg = "#9c6900",
@@ -58,6 +67,19 @@ function M.setup(opts)
 
   -- base editor background; "NONE" lets the terminal show through
   local bg = M.config.transparent and "NONE" or p.litmus_9
+
+  -- :terminal colours. Slot 0 is dark and slot 7 is a readable grey, because
+  -- programs print in 7 expecting a dark background. Bright variants stay
+  -- dark enough to read, since pale colours disappear on a light background.
+  local term = {
+    p.litmus_0, p.error,    p.add_fg,   p.change_fg,
+    p.blue,     p.primary,  p.info,     p.litmus_4,
+    p.litmus_3, p.bright_red, p.bright_green, p.bright_yellow,
+    p.bright_blue, p.bright_magenta, p.bright_cyan, p.litmus_5,
+  }
+  for i, c in ipairs(term) do
+    vim.g["terminal_color_" .. (i - 1)] = c
+  end
 
   -- EDITOR ------------------------------------------------
 
