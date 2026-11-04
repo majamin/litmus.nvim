@@ -28,9 +28,9 @@ M.palette = {
   info =    "#057176",
   hint =    "#6f7477",
 
-  add =    "#d4feff",
-  change = "#fffed4",
-  delete = "#fed4ff",
+  add =    "#d2f6d8",
+  change = "#fbefc2",
+  delete = "#fedfe2",
 
   visual =    "#dcd5f9",
   search =    "#feed8c",
