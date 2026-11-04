@@ -15,6 +15,7 @@ M.palette = {
   litmus_7 = "#bdc6cb",
   litmus_8 = "#d3ebf8",
   litmus_9 = "#f7fcff",
+  surface =  "#c1e0f1",
 
   primary =   "#bf1d71",
   secondary = "#461dbf",
@@ -29,6 +30,10 @@ M.palette = {
   add =    "#d4feff",
   change = "#fffed4",
   delete = "#fed4ff",
+
+  visual =    "#dcd5f9",
+  search =    "#feed8c",
+  diff_text = "#f7dd7d",
 
   -- darker versions of the tints above, for use as text
   add_fg =    "#0a7e3a",
@@ -66,15 +71,15 @@ function M.setup(opts)
   hi("CursorLine",   { bg = p.litmus_8 })
   hi("CursorColumn", { bg = p.litmus_8 })
   hi("CursorLineNr", { fg = p.primary, bold = true })
-  hi("Visual",       { fg = p.litmus_0, bg = p.change })
-  hi("VisualNOS",    { fg = p.litmus_0, bg = p.change })
+  hi("Visual",       { fg = p.litmus_0, bg = p.visual })
+  hi("VisualNOS",    { fg = p.litmus_0, bg = p.visual })
 
   hi("LineNr",      { fg = p.litmus_6 })
   hi("SignColumn",  { fg = p.litmus_4, bg = bg })
   hi("ColorColumn", { bg = p.litmus_8 })
   hi("VertSplit",   { fg = p.litmus_7, bg = bg })
   hi("WinSeparator",{ fg = p.litmus_7, bg = bg })
-  hi("Folded",      { fg = p.litmus_4, bg = p.litmus_8 })
+  hi("Folded",      { fg = p.litmus_3, bg = p.surface })
   hi("FoldColumn",  { fg = p.litmus_6, bg = bg })
 
   hi("StatusLine",   { fg = p.litmus_0, bg = p.litmus_8 })
@@ -97,10 +102,10 @@ function M.setup(opts)
   hi("PmenuSbar",     { bg = p.litmus_7 })
   hi("PmenuThumb",    { bg = p.litmus_3 })
 
-  hi("Search",     { bg = p.add })
-  hi("IncSearch",  { bg = p.add })
-  hi("CurSearch",  { bg = p.add })
-  hi("Substitute", { bg = p.add })
+  hi("Search",     { fg = p.litmus_0, bg = p.search })
+  hi("IncSearch",  { fg = p.litmus_9, bg = p.primary })
+  hi("CurSearch",  { fg = p.litmus_9, bg = p.primary })
+  hi("Substitute", { fg = p.litmus_0, bg = p.search })
   hi("MatchParen", { bg = p.delete, bold = true })
 
   hi("ModeMsg",    { fg = p.litmus_2, bold = true })
@@ -116,7 +121,7 @@ function M.setup(opts)
   hi("Directory",   { fg = p.primary })
   hi("Title",       { fg = p.litmus_0, bold = true })
   hi("Conceal",     { fg = p.litmus_5 })
-  hi("QuickFixLine",{ bg = p.litmus_8 })
+  hi("QuickFixLine",{ bg = p.surface })
 
   -- SYNTAX ------------------------------------------------
 
@@ -338,7 +343,7 @@ function M.setup(opts)
   hi("DiffAdd",    { fg = p.litmus_0, bg = p.add })
   hi("DiffChange", { fg = p.litmus_0, bg = p.change })
   hi("DiffDelete", { fg = p.litmus_0, bg = p.delete })
-  hi("DiffText",   { fg = p.litmus_0, bg = p.litmus_8, bold = true })
+  hi("DiffText",   { fg = p.litmus_0, bg = p.diff_text, bold = true })
 
   hi("Added",   { fg = p.litmus_0, bg = p.add })
   hi("Changed", { fg = p.litmus_0, bg = p.change })
