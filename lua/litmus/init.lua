@@ -18,10 +18,10 @@ M.palette = {
 
   primary =   "#bf1d71",
   secondary = "#461dbf",
+  tertiary =  "#017799",
 
   type =    "#463eac",
   string =  "#22744d",
-  boolean = "#017799",
 
   error =   "#c21725",
   warning = "#a56205",
@@ -153,9 +153,9 @@ function M.setup(opts)
   hi("Constant",  { fg = p.litmus_1 })
   hi("String",    { fg = p.string })
   hi("Character", { fg = p.string })
-  hi("Number",    { fg = p.litmus_1 })
-  hi("Boolean",   { fg = p.boolean })
-  hi("Float",     { fg = p.litmus_1 })
+  hi("Number",    { fg = p.tertiary })
+  hi("Boolean",   { fg = p.tertiary })
+  hi("Float",     { fg = p.tertiary })
 
   hi("Identifier", { fg = p.litmus_0 })
   hi("Function",   { fg = p.primary, bold = true })
@@ -195,10 +195,10 @@ function M.setup(opts)
   hi("@variable",        { fg = p.litmus_0 })
   hi("@variable.builtin",{ fg = p.litmus_2 })
   hi("@variable.parameter", { fg = p.litmus_1 })
-  hi("@variable.member", { fg = p.litmus_1 })
+  hi("@variable.member", { fg = p.tertiary })
 
   hi("@constant",       { fg = p.litmus_1 })
-  hi("@constant.builtin",{ fg = p.litmus_1 })
+  hi("@constant.builtin",{ fg = p.tertiary })
   hi("@constant.macro", { fg = p.litmus_2 })
 
   hi("@module", { fg = p.litmus_2 })
@@ -213,16 +213,16 @@ function M.setup(opts)
   hi("@character",         { fg = p.string })
   hi("@character.special", { fg = p.string, bold = true })
 
-  hi("@boolean",      { fg = p.boolean })
-  hi("@number",       { fg = p.litmus_1 })
-  hi("@number.float", { fg = p.litmus_1 })
+  hi("@boolean",      { fg = p.tertiary })
+  hi("@number",       { fg = p.tertiary })
+  hi("@number.float", { fg = p.tertiary })
 
   hi("@type",            { fg = p.type })
   hi("@type.builtin",    { fg = p.type })
   hi("@type.definition", { fg = p.type, bold = true })
 
   hi("@attribute", { fg = p.litmus_4 })
-  hi("@property",  { fg = p.litmus_1 })
+  hi("@property",  { fg = p.tertiary })
 
   hi("@function",             { fg = p.primary, bold = true })
   hi("@function.builtin",     { fg = p.litmus_0 })
