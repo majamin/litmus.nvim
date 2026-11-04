@@ -135,7 +135,7 @@ function M.setup(opts)
   hi("Float",     { fg = p.litmus_1 })
 
   hi("Identifier", { fg = p.litmus_0 })
-  hi("Function",   { fg = p.litmus_0, bold = true })
+  hi("Function",   { fg = p.secondary, bold = true })
 
   hi("Statement",   { fg = p.primary })
   hi("Conditional", { fg = p.litmus_1 })
@@ -151,7 +151,7 @@ function M.setup(opts)
   hi("Macro",     { fg = p.litmus_3 })
   hi("PreCondit", { fg = p.litmus_3 })
 
-  hi("Type",         { fg = p.litmus_1 })
+  hi("Type",         { fg = p.type })
   hi("StorageClass", { fg = p.litmus_2, bold = true })
   hi("Structure",    { fg = p.litmus_1 })
   hi("Typedef",      { fg = p.litmus_1 })
