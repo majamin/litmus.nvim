@@ -20,7 +20,7 @@ M.palette = {
   secondary = "#461dbf",
 
   type =    "#463eac",
-  string =  "#2c6565",
+  string =  "#22744d",
 
   error =   "#c21725",
   warning = "#a56205",
