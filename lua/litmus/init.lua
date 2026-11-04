@@ -27,6 +27,11 @@ M.palette = {
   add =    "#d4feff",
   change = "#fffed4",
   delete = "#fed4ff",
+
+  -- darker versions of the tints above, for use as text
+  add_fg =    "#0a7e3a",
+  change_fg = "#9c6900",
+  delete_fg = "#be2038",
 }
 
 function M.setup(opts)
@@ -250,9 +255,9 @@ function M.setup(opts)
   hi("markdownh5", { link = "@markup.heading" })
   hi("markdownh6", { link = "@markup.heading" })
 
-  hi("@diff.plus",  { fg = p.add })
-  hi("@diff.minus", { fg = p.delete })
-  hi("@diff.delta", { fg = p.change })
+  hi("@diff.plus",  { fg = p.add_fg })
+  hi("@diff.minus", { fg = p.delete_fg })
+  hi("@diff.delta", { fg = p.change_fg })
 
   hi("@tag",           { fg = p.primary })
   hi("@tag.attribute", { fg = p.litmus_2 })
@@ -268,15 +273,15 @@ function M.setup(opts)
   hi("csvCol1",  { fg = p.warning })
   hi("csvCol2",  { fg = p.info })
   hi("csvCol3",  { fg = p.hint })
-  hi("csvCol4",  { fg = p.add })
-  hi("csvCol5",  { fg = p.change })
-  hi("csvCol6",  { fg = p.delete })
+  hi("csvCol4",  { fg = p.add_fg })
+  hi("csvCol5",  { fg = p.change_fg })
+  hi("csvCol6",  { fg = p.delete_fg })
   hi("csvCol7",  { fg = p.warning })
   hi("csvCol8",  { fg = p.info })
   hi("csvCol9",  { fg = p.hint })
-  hi("csvCol10", { fg = p.add })
-  hi("csvCol11", { fg = p.change })
-  hi("csvCol12", { fg = p.delete })
+  hi("csvCol10", { fg = p.add_fg })
+  hi("csvCol11", { fg = p.change_fg })
+  hi("csvCol12", { fg = p.delete_fg })
 
   hi("@lsp.type.class",         { link = "@type" })
   hi("@lsp.type.decorator",     { link = "@function" })
@@ -300,7 +305,7 @@ function M.setup(opts)
   hi("DiagnosticWarn",  { fg = p.warning })
   hi("DiagnosticInfo",  { fg = p.info })
   hi("DiagnosticHint",  { fg = p.hint })
-  hi("DiagnosticOk",    { fg = p.add })
+  hi("DiagnosticOk",    { fg = p.add_fg })
 
   hi("DiagnosticUnderlineError", { undercurl = true, sp = p.error })
   hi("DiagnosticUnderlineWarn",  { undercurl = true, sp = p.warning })
@@ -318,13 +323,13 @@ function M.setup(opts)
   hi("DiagnosticFloatingWarn",  { fg = p.warning })
   hi("DiagnosticFloatingInfo",  { fg = p.info })
   hi("DiagnosticFloatingHint",  { fg = p.hint })
-  hi("DiagnosticFloatingOk",    { fg = p.add })
+  hi("DiagnosticFloatingOk",    { fg = p.add_fg })
 
   hi("DiagnosticSignError", { fg = p.error })
   hi("DiagnosticSignWarn",  { fg = p.warning })
   hi("DiagnosticSignInfo",  { fg = p.info })
   hi("DiagnosticSignHint",  { fg = p.hint })
-  hi("DiagnosticSignOk",    { fg = p.add })
+  hi("DiagnosticSignOk",    { fg = p.add_fg })
 
   -- DIFF --------------------------------------------------
 
@@ -366,9 +371,9 @@ function M.setup(opts)
   hi("CmpItemKindKeyword",     { fg = p.litmus_3 })
 
   -- gitsigns
-  hi("GitSignsAdd",              { fg = p.add })
-  hi("GitSignsChange",           { fg = p.change })
-  hi("GitSignsDelete",           { fg = p.delete })
+  hi("GitSignsAdd",              { fg = p.add_fg })
+  hi("GitSignsChange",           { fg = p.change_fg })
+  hi("GitSignsDelete",           { fg = p.delete_fg })
   hi("GitSignsAddNr",            { fg = p.litmus_0, bg = p.add })
   hi("GitSignsChangeNr",         { fg = p.litmus_0, bg = p.change })
   hi("GitSignsDeleteNr",         { fg = p.litmus_0, bg = p.delete })
@@ -382,9 +387,9 @@ function M.setup(opts)
   hi("NeoTreeRootName",      { fg = p.litmus_0, bold = true })
   hi("NeoTreeFileName",      { fg = p.litmus_2 })
   hi("NeoTreeFileIcon",      { fg = p.litmus_4 })
-  hi("NeoTreeGitAdded",      { fg = p.add })
-  hi("NeoTreeGitModified",   { fg = p.change })
-  hi("NeoTreeGitDeleted",    { fg = p.delete })
+  hi("NeoTreeGitAdded",      { fg = p.add_fg })
+  hi("NeoTreeGitModified",   { fg = p.change_fg })
+  hi("NeoTreeGitDeleted",    { fg = p.delete_fg })
   hi("NeoTreeGitUntracked",  { fg = p.litmus_4 })
   hi("NeoTreeIndentMarker",  { fg = p.litmus_7 })
 
@@ -556,7 +561,7 @@ function M.setup(opts)
   -- health
   hi("healthError",   { fg = p.error })
   hi("healthWarning", { fg = p.warning })
-  hi("healthSuccess", { fg = p.add })
+  hi("healthSuccess", { fg = p.add_fg })
 
   -- quickfix
   hi("qffilename", { fg = p.primary })
