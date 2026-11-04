@@ -368,7 +368,7 @@ function M.setup(opts)
 
   hi("DiagnosticVirtualTextError", { fg = p.error, bg = p.delete, italic = true })
   hi("DiagnosticVirtualTextWarn",  { fg = p.warning, bg = p.change, italic = true })
-  hi("DiagnosticVirtualTextInfo",  { fg = p.info, bg = p.add, italic = true })
+  hi("DiagnosticVirtualTextInfo",  { fg = p.info, bg = p.litmus_8, italic = true })
   hi("DiagnosticVirtualTextHint",  { fg = p.hint, bg = bg, italic = true })
   hi("DiagnosticVirtualTextOk",    { fg = p.add_fg, bg = p.add, italic = true })
 
