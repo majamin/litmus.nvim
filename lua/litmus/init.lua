@@ -15,7 +15,6 @@ M.palette = {
   litmus_7 = "#bdc6cb",
   litmus_8 = "#d3ebf8",
   litmus_9 = "#f7fcff",
-  surface =  "#c1e0f1",
 
   primary =   "#bf1d71",
   secondary = "#461dbf",
@@ -102,7 +101,7 @@ function M.setup(opts)
   hi("ColorColumn", { bg = p.litmus_8 })
   hi("VertSplit",   { fg = p.litmus_7, bg = bg })
   hi("WinSeparator",{ fg = p.litmus_7, bg = bg })
-  hi("Folded",      { fg = p.litmus_3, bg = p.surface })
+  hi("Folded",      { fg = p.litmus_4, italic = true })
   hi("FoldColumn",  { fg = p.litmus_6, bg = bg })
 
   hi("StatusLine",   { fg = p.litmus_0, bg = p.litmus_8 })
@@ -129,7 +128,7 @@ function M.setup(opts)
   hi("IncSearch",  { fg = p.litmus_9, bg = p.primary })
   hi("CurSearch",  { fg = p.litmus_9, bg = p.primary })
   hi("Substitute", { fg = p.litmus_0, bg = p.search })
-  hi("MatchParen", { bg = p.surface, bold = true })
+  hi("MatchParen", { fg = p.primary, bold = true })
 
   hi("ModeMsg",    { fg = p.litmus_2, bold = true })
   hi("MoreMsg",    { fg = p.primary })
@@ -144,7 +143,7 @@ function M.setup(opts)
   hi("Directory",   { fg = p.primary })
   hi("Title",       { fg = p.litmus_0, bold = true })
   hi("Conceal",     { fg = p.litmus_5 })
-  hi("QuickFixLine",{ bg = p.surface })
+  hi("QuickFixLine",{ fg = p.primary, bold = true })
 
   -- SYNTAX ------------------------------------------------
 
