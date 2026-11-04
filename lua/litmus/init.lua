@@ -21,6 +21,7 @@ M.palette = {
 
   type =    "#463eac",
   string =  "#22744d",
+  boolean = "#017799",
 
   error =   "#c21725",
   warning = "#a56205",
@@ -153,7 +154,7 @@ function M.setup(opts)
   hi("String",    { fg = p.string })
   hi("Character", { fg = p.string })
   hi("Number",    { fg = p.litmus_1 })
-  hi("Boolean",   { fg = p.litmus_1 })
+  hi("Boolean",   { fg = p.boolean })
   hi("Float",     { fg = p.litmus_1 })
 
   hi("Identifier", { fg = p.litmus_0 })
@@ -212,7 +213,7 @@ function M.setup(opts)
   hi("@character",         { fg = p.string })
   hi("@character.special", { fg = p.string, bold = true })
 
-  hi("@boolean",      { fg = p.litmus_1 })
+  hi("@boolean",      { fg = p.boolean })
   hi("@number",       { fg = p.litmus_1 })
   hi("@number.float", { fg = p.litmus_1 })
 
