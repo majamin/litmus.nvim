@@ -5,16 +5,16 @@ M.config = {
 }
 
 M.palette = {
-  litmus_0 = "#171b1d",
-  litmus_1 = "#292e31",
-  litmus_2 = "#414649",
-  litmus_3 = "#585d60",
-  litmus_4 = "#6f7477",
-  litmus_5 = "#868b8e",
-  litmus_6 = "#9da2a5",
-  litmus_7 = "#bdc6cb",
-  litmus_8 = "#d3ebf8",
-  litmus_9 = "#f7fcff",
+  litmus_0 = "#181a1e",
+  litmus_1 = "#2b2d31",
+  litmus_2 = "#424549",
+  litmus_3 = "#595c61",
+  litmus_4 = "#707378",
+  litmus_5 = "#878a8f",
+  litmus_6 = "#9ea1a6",
+  litmus_7 = "#bfc4cc",
+  litmus_8 = "#dbe9fe",
+  litmus_9 = "#f9fbff",
 
   primary =   "#bf1d71",
   secondary = "#461dbf",
@@ -26,13 +26,13 @@ M.palette = {
   error =   "#c21725",
   warning = "#a56205",
   info =    "#057176",
-  hint =    "#6f7477",
+  hint =    "#707378",
 
   add =    "#d2f6d8",
   change = "#fbefc2",
   delete = "#fedfe2",
 
-  visual =    "#dcd5f9",
+  visual =    "#dbcafc",
   search =    "#feed8c",
   diff_text = "#f7dd7d",
 
