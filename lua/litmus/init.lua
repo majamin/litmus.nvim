@@ -19,9 +19,11 @@ M.palette = {
   primary =   "#bf1d71",
   secondary = "#461dbf",
 
-  error =   "#dc2678",
-  warning = "#891dbf",
-  info =    "#19a6a6",
+  type =    "#891dbf",
+
+  error =   "#c21725",
+  warning = "#a56205",
+  info =    "#057176",
   hint =    "#737373",
 
   add =    "#d4feff",
@@ -187,9 +189,9 @@ function M.setup(opts)
   hi("@number",       { fg = p.litmus_1 })
   hi("@number.float", { fg = p.litmus_1 })
 
-  hi("@type",            { fg = p.warning })
-  hi("@type.builtin",    { fg = p.warning })
-  hi("@type.definition", { fg = p.warning })
+  hi("@type",            { fg = p.type })
+  hi("@type.builtin",    { fg = p.type })
+  hi("@type.definition", { fg = p.type })
 
   hi("@attribute", { fg = p.litmus_3 })
   hi("@property",  { fg = p.litmus_1 })
