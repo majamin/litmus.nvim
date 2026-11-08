@@ -347,7 +347,7 @@ function M.setup(opts)
   hi("@lsp.typemod.method.definition",    { link = "@function.method" })
   hi("@lsp.mod.deprecated",               { strikethrough = true })
 
-  hi("LspInlayHint",          { fg = p.litmus_5, italic = true })
+  hi("LspInlayHint",          { fg = p.litmus_6, italic = true })
   hi("LspCodeLens",           { fg = p.litmus_5, italic = true })
   hi("LspSignatureActiveParameter", { fg = p.primary, bold = true })
 
