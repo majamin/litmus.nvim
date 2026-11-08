@@ -27,7 +27,7 @@ M.palette = {
 
   error =   "#c21725",
   warning = "#a56205",
-  info =    "#057176",
+  info =    "#087970",
   hint =    "#707378",
 
   add =    "#d2f6d8",
