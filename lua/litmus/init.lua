@@ -17,6 +17,7 @@ M.palette = {
   litmus_9 = "#f9fbff",
 
   primary =   "#bf1d71",
+  call =      "#872c55",
   secondary = "#461dbf",
   tertiary =  "#ae4e1a",
 
@@ -226,10 +227,10 @@ function M.setup(opts)
 
   hi("@function",             { fg = p.primary, bold = true })
   hi("@function.builtin",     { fg = p.litmus_0 })
-  hi("@function.call",        { fg = p.litmus_0 })
+  hi("@function.call",        { fg = p.call })
   hi("@function.macro",       { fg = p.litmus_2 })
   hi("@function.method",      { fg = p.primary, bold = true })
-  hi("@function.method.call", { fg = p.litmus_0 })
+  hi("@function.method.call", { fg = p.call })
 
   hi("@constructor", { fg = p.type })
 
