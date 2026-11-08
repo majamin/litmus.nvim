@@ -18,6 +18,7 @@ M.palette = {
 
   primary =   "#bf1d71",
   call =      "#872c55",
+  reference = "#3778d7",
   secondary = "#461dbf",
   tertiary =  "#ae4e1a",
 
@@ -305,9 +306,9 @@ function M.setup(opts)
 
   -- LSP SEMANTIC TOKENS -----------------------------------
 
-  hi("LspReferenceText",  { bg = p.litmus_8 })
-  hi("LspReferenceRead",  { bg = p.litmus_8 })
-  hi("LspReferenceWrite", { bg = p.litmus_8, underline = true, sp = p.primary })
+  hi("LspReferenceText",  { underline = true, sp = p.reference })
+  hi("LspReferenceRead",  { underline = true, sp = p.reference })
+  hi("LspReferenceWrite", { underdouble = true, sp = p.reference })
 
   hi("csvCol0",  { fg = p.error })
   hi("csvCol1",  { fg = p.warning })
