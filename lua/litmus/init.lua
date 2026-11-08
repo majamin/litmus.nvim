@@ -306,9 +306,9 @@ function M.setup(opts)
 
   -- LSP SEMANTIC TOKENS -----------------------------------
 
-  hi("LspReferenceText",  { underline = true, sp = p.reference })
-  hi("LspReferenceRead",  { underline = true, sp = p.reference })
-  hi("LspReferenceWrite", { underdouble = true, sp = p.reference })
+  hi("LspReferenceText",  { fg = p.reference, bold = true })
+  hi("LspReferenceRead",  { fg = p.reference, bold = true })
+  hi("LspReferenceWrite", { fg = p.reference, bold = true })
 
   hi("csvCol0",  { fg = p.error })
   hi("csvCol1",  { fg = p.warning })
