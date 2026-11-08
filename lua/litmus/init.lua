@@ -17,7 +17,7 @@ M.palette = {
   litmus_9 = "#f9fbff",
 
   primary =   "#bf1d71",
-  call =      "#872c55",
+  call =      "#91256c",
   reference = "#3778d7",
   secondary = "#461dbf",
   tertiary =  "#ae4e1a",
