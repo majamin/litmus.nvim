@@ -195,7 +195,7 @@ function M.setup(opts)
   hi("@variable",        { fg = p.litmus_0 })
   hi("@variable.builtin",{ fg = p.litmus_2 })
   hi("@variable.parameter", { fg = p.litmus_1 })
-  hi("@variable.member", { fg = p.tertiary })
+  hi("@variable.member", { fg = p.litmus_1 })
 
   hi("@constant",       { fg = p.litmus_1 })
   hi("@constant.builtin",{ fg = p.tertiary })
@@ -222,7 +222,7 @@ function M.setup(opts)
   hi("@type.definition", { fg = p.type, bold = true })
 
   hi("@attribute", { fg = p.litmus_4 })
-  hi("@property",  { fg = p.tertiary })
+  hi("@property",  { fg = p.litmus_1 })
 
   hi("@function",             { fg = p.primary, bold = true })
   hi("@function.builtin",     { fg = p.litmus_0 })
