@@ -23,7 +23,7 @@ M.palette = {
   tertiary =  "#ae4e1a",
 
   type =    "#463eac",
-  string =  "#117454",
+  string =  "#03745a",
 
   error =   "#c21725",
   warning = "#a56205",
