@@ -18,7 +18,7 @@ M.palette = {
 
   primary =   "#bf1d71",
   secondary = "#461dbf",
-  tertiary =  "#017799",
+  tertiary =  "#ae4e1a",
 
   type =    "#463eac",
   string =  "#22744d",
